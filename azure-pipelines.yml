@@ -1,0 +1,18 @@
+trigger:
+  - main
+
+pool: slave
+
+
+variables:
+  COMPONENT: 'frontend'
+
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: GurukaYadav/roboshop-azure-devops-templates
+      endpoint: GurukaYadav
+
+stages:
+  - template: nginx.yml@templates
