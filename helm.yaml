@@ -1,6 +1,6 @@
 appName: frontend
 service:
-  type: ClusterIP
+  type: NodePort
   targetPort: 80
 
 
