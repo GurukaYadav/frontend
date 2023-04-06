@@ -2,5 +2,5 @@ appName: frontend
 service:
   type: NodePort
   targetPort: 80
-  
+
 
