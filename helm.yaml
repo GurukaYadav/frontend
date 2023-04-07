@@ -2,5 +2,8 @@ appName: frontend
 service:
   type: NodePort
   port: 80
+ingress:
+  enabled: true
+  scheme: internet-facing
 
 
