@@ -6,6 +6,6 @@ ingress:
   enabled: true
   scheme: internet-facing
 configMap:
-  enabled: false
+  enabled: "false"
 
 
