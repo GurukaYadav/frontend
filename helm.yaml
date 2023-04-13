@@ -9,6 +9,17 @@ configMap:
   enabled: "false"
 externalSecret:
   enabled: false
+resources:
+  requests:
+    memory: "300Mi"
+    cpu: "600m"
+  limits:
+    memory: "500Mi"
+    cpu: "750m"
+hpa:
+  min: 2
+  max: 10
+  avgCpu: 70
 
 
 #for configMap, we need to doubt quote the boolean to get a string and also we need to double quote the numbers
