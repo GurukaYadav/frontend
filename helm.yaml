@@ -19,7 +19,7 @@ resources:
 hpa:
   min: 2
   max: 10
-  avgCpu: 70
+  cpuAvg: 70
 
 
 #for configMap, we need to doubt quote the boolean to get a string and also we need to double quote the numbers
