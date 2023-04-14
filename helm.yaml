@@ -1,14 +1,19 @@
 appName: frontend
+
 service:
   port: 80
   type: NodePort
+
 ingress:
   enabled: true
   scheme: internet-facing
+
 configMap:
   enabled: "false"
+
 externalSecret:
   enabled: false
+
 resources:
   requests:
     memory: "300Mi"
@@ -16,17 +21,19 @@ resources:
   limits:
     memory: "500Mi"
     cpu: "750m"
+
 hpa:
   min: 2
   max: 10
   cpuAvg: 70
+
 probes:
+  path: /health
+  port: 80
   liveness:
-    port: 80
     initialDelaySeconds: 5
     periodSeconds: 10
   readiness:
-    port: 80
     initialDelaySeconds: 5
     periodSeconds: 10
 
