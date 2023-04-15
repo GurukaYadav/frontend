@@ -29,13 +29,15 @@ hpa:
 
 probes:
   endpoint: /health
-  port: 80
+  port: 8080
   liveness:
     initialDelaySeconds: 5
     periodSeconds: 10
+    timeoutSeconds: 10
   readiness:
     initialDelaySeconds: 5
     periodSeconds: 10
+    timeoutSeconds: 10
 
 
 #for configMap, we need to doubt quote the boolean to get a string and also we need to double quote the numbers
