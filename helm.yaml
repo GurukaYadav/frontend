@@ -28,8 +28,9 @@ hpa:
   cpuAvg: 70
 
 probes:
+  enabled: true
   endpoint: /health
-  port: 8080
+  port: 80
   liveness:
     initialDelaySeconds: 5
     periodSeconds: 10
